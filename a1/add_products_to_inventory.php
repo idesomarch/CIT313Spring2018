@@ -21,6 +21,7 @@
 <?php
 global $product_type;
 global $produceItem;
+global $produceType;
 // defined global variables
 //unset the current product array in session and start fresh
 unset($_SESSION['aryProductArray']);
@@ -74,7 +75,7 @@ for ($x=0; $x<=7; $x++) {
 		echo "Product ID: " . $produceItem->product_id . "<br />";
 		echo "Product Name: " . $produceItem->product_name . "<br />";
 		echo "Product Type: ". $produceType->produce_type . "<br />";
-		echo "Product Price: $". $produceItem->product_price . " ".$pType."<br /><hr/>";
+		echo "Product Price: ". $produceItem->product_price . " ".$pType."<br /><hr/>";
 
 		//add object to the array
 

@@ -19,9 +19,11 @@
 <body>
 
 <?php
-
+global $product_type;
+global $produceItem;
+// defined global variables
 //unset the current product array in session and start fresh
-unset($_SESSION['arrProductArray']);
+unset($_SESSION['aryProductArray']);
 
 $aryProductArray = array();
 
@@ -46,7 +48,8 @@ for ($x=0; $x<=7; $x++) {
 		//create an empty produceItem variable
 		$produceItem;
 
-		switch ($thisProduceType) {
+		switch ($product_type) {
+
 			case "f": //fruit
 				//create fruit object
 				$produceItem = new fruit($x, $thisProductName, $thisProductPriceType, $thisProductPrice);
@@ -54,12 +57,13 @@ for ($x=0; $x<=7; $x++) {
 				break;
 			case "v": //veg
 				//create veggie object
-				$produceItem = new veggie($x, $_thisProductName, $thisProductPriceType, $thisProductPrice);
+				$produceItem = new veggie($x, $thisProductName, $thisProductPriceType, $thisProductPrice);
 				$typeType = "Veggie";
 				break;
 		}
 
-		if($produceItem->price_type == 2) {
+		if($produceItem->product_id == 2) {
+
 			//added semicolon after "Each"
 			$pType = "Each";
 		}
@@ -69,7 +73,7 @@ for ($x=0; $x<=7; $x++) {
 
 		echo "Product ID: " . $produceItem->product_id . "<br />";
 		echo "Product Name: " . $produceItem->product_name . "<br />";
-		echo "Product Type: ". $typeType . "<br />";
+		echo "Product Type: ". $produceType->produce_type . "<br />";
 		echo "Product Price: $". $produceItem->product_price . " ".$pType."<br /><hr/>";
 
 		//add object to the array
@@ -86,7 +90,7 @@ for ($x=0; $x<=7; $x++) {
 //if the array is not empty, put it into the Session
 $_SESSION['aryProductArray'] = serialize($aryProductArray);
 session_write_close();
-
+}
 //links
 ?>
 <p>

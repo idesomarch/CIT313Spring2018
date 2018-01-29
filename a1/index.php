@@ -63,7 +63,7 @@
 	</fieldset>
 
 
-    <?php {
+    <?php
 
 }
 	// ) was here, removed

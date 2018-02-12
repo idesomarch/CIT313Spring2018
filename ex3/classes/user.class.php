@@ -1,5 +1,5 @@
 <?php
-class user{
+abstract class user{
 protected $user_id;
 protected $user_type;
 protected $first_name;
@@ -8,15 +8,16 @@ protected $email_address;
 protected $user_level;
 
 
-public function __construct() {
-  
+
+
+public function __construct($level) {
+  $this->user_level = $level;
 }
 public function __set($name,$value) {
-  $this->$name = $value;
-  return;
+
 }
 public function __get($name) {
-  return $this->$name;
+
 }
 public function __destruct() {
 

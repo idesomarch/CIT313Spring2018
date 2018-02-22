@@ -5,8 +5,8 @@ class controller {
     public $model;
 
     function __construct() {
-        $this->load = new Load();
-        $this->model = new Model();
+        $this->load = new load();
+        $this->model = new model();
         $this->home();
     }
 

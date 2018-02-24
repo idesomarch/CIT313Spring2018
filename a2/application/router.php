@@ -1,23 +1,22 @@
 <?php
-include '_includes/config.php'
-    
+
+
     function myLoad($class) {
-     include_once('application/controllers/'.strtolower($class).'.class.php');
-     include_once('application/models/'.strtolower($class).'.class.php');
-     include_once('application/'.strtolower($class).'.class.php');
 
-
-    }
+     if(file_exists('application/controllers/'.$class.'.class.php')) {
+       include_once('application/controllers/'.$class.'.class.php');
+     }
+     if(file_exists('application/'.$class.'.class.php')) {
+       include_once('application/'.$class.'.class.php');
+     }
+     if(file_exists('application/models/'.$class.'.class.php')) {
+       include_once('application/models/'.$class.'.class.php');
+     }
 }
-spl_autoload_register('myLoad');
 
-    new Controller();
+  spl_autoload_register('myLoad');
+
+
+new controller();
 
 ?>
-
-
-
-
-//require_once 'application/load.class.php';
-    //require_once 'application/model.class.php';
-    //require_once 'application/controller.class.php';

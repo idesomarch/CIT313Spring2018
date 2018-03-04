@@ -40,8 +40,6 @@ class Post extends Model{
 
 	public function addPost($data){
 
-
-
 		$sql="INSERT INTO posts (title,date,categoryID,content) VALUES (?,?,?,?)";
 		$this->db->execute($sql,$data);
 		$message = 'Post added.';
@@ -51,7 +49,10 @@ class Post extends Model{
 
 public function update($data){
 
-	$sql="UPDATE posts SET title='$_POST[post_title]'";
+	$sql="UPDATE posts SET title='?', date='?', categoryID='?', content='?' WHERE pID ='0'";
+	$this->db->execute($sql,$data);
+	$message = 'Post Updated.';
+	return $message;
 }
 
 }

@@ -8,7 +8,8 @@
 
 <h1><?php echo $title;?></h1>
   </div>
-<p><b><?php echo date("r", strtotime('date')) ?></b></p>
+
+<p><b><?php echo date("r", strtotime($post['date'])); ?></b></p>
 <?php echo $content;?>
 
 </div>

@@ -6,7 +6,7 @@ class Post extends Model{
 		$sql =  'SELECT pID, title, date, categoryID, uID, content FROM posts WHERE pID = ?';
 //$sql = 'SELECT convert(varchar, date, 101) AS date FROM posts';
 		// perform query
-		
+
 		$results = $this->db->getrow($sql, array($pID));
 
 		$post = $results;
@@ -37,14 +37,21 @@ class Post extends Model{
 
 	}
 
+
 	public function addPost($data){
 
-		$sql='INSERT INTO posts (title,content) VALUES (?,?)';
+
+
+		$sql="INSERT INTO posts (title,date,categoryID,content) VALUES (?,?,?,?)";
 		$this->db->execute($sql,$data);
 		$message = 'Post added.';
 		return $message;
 
 	}
 
+public function update($data){
+
+	$sql="UPDATE posts SET title='$_POST[post_title]'";
+}
 
 }

@@ -15,6 +15,10 @@
         <form action="<?php echo BASE_URL?>addpost/<?php echo $task?>" method="post" onsubmit="editor.post()">
           <label>Title</label>
           <input type="text" class="span6" name="post_title" value="<?php echo $title?>">
+					<label>Date</label>
+          <input type="date" class="span6" name="post_date" value="<?php echo $date?>">
+					<label>Category</label>
+          <input type="text" class="span1" name="post_categoryID" value="<?php echo $categoryID?>">
      			<label>Content</label>
           <textarea id="tinyeditor" name="post_content" style="width:556px;height: 200px"><?php echo $content?></textarea>
     			<br/>
@@ -22,9 +26,8 @@
           <button id="submit" type="submit" class="btn btn-primary" >Submit</button>
         </form>
 
-        
+
       </div>
     </div>
 </div>
 <?php include('elements/admin_footer.php');?>
-

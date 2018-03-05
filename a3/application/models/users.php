@@ -1,15 +1,17 @@
 <?php
 class Users extends Model{
 
-	function getUsers($uID){
+	function getUser($uID){
 
 		$sql =  'SELECT uID, email, first_name, last_name, password, user_type, active FROM posts WHERE uID = ?';
 
+		// perform query
+
 		$results = $this->db->getrow($sql, array($uID));
 
-		$users = $results;
+		$user = $results;
 
-		return $users;
+		return $user;
 
 	}
 
@@ -21,13 +23,15 @@ class Users extends Model{
 		}
 
 
-		$sql =  'SELECT uID, email, first_name, last_name, password, user_type, active FROM posts'.$numusers;
+		$sql =  'SELECT uID, email, first_name, last_name, password, user_type FROM users';
 
 		 //perform query
 		$results = $this->db->execute($sql);
+		
 
 		while ($row=$results->fetchrow()) {
 			$users[] = $row;
+
 		}
 
 		return $users;

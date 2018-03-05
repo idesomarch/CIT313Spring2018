@@ -2,7 +2,7 @@
 
 class RegisterController extends Controller{
 
-	public $usersObject;
+	public $userObject;
 
 	public function defaultTask(){
 

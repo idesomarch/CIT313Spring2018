@@ -27,7 +27,7 @@ class Users extends Model{
 
 		 //perform query
 		$results = $this->db->execute($sql);
-		
+
 
 		while ($row=$results->fetchrow()) {
 			$users[] = $row;
@@ -41,7 +41,7 @@ class Users extends Model{
 
 	public function addUser($data){
 
-		$sql="INSERT INTO users (email,first_name,last_name,password) VALUES (?,?,?,?)";
+		$sql="INSERT INTO users (email,password,first_name,last_name) VALUES (?,?,?,?)";
 		$this->db->execute($sql,$data);
 		$userMessage = 'User added.';
 		return $userMessage;

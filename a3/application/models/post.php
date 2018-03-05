@@ -4,7 +4,7 @@ class Post extends Model{
 	function getPost($pID){
 
 		$sql =  'SELECT pID, title, date, categoryID, uID, content FROM posts WHERE pID = ?';
-//$sql = 'SELECT convert(varchar, date, 101) AS date FROM posts';
+
 		// perform query
 
 		$results = $this->db->getrow($sql, array($pID));

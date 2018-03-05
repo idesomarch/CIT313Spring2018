@@ -45,6 +45,7 @@
             <ul class="nav">
               <li class="active"><a href="<?php echo BASE_URL?>">Home</a></li>
               <li><a href="<?php echo BASE_URL?>blog/">Blog</a></li>
+              <li><a href="<?php echo BASE_URL?>membership/">Members</a></li>
               <li><a href="<?php echo BASE_URL?>register/">Register</a></li>
               <li><a href="<?php echo BASE_URL?>login/">Login</a></li>
             </ul>

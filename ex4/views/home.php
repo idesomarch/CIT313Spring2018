@@ -1,4 +1,5 @@
 <?php
+
 require_once('application/config.php');
 include('elements/header.php');?>
 <div class="container">
@@ -6,4 +7,5 @@ include('elements/header.php');?>
     <h1>Hello From the View</h1>
   </div>
 </div>
+
 <?php include('elements/footer.php');?>

@@ -4,7 +4,7 @@ class Users extends Model{
 	public $first_name;
 	public $last_name;
 	public $email;
-	public $user_type;
+	protected $user_type;
 
 	// Constructor
 	public function __construct(){
@@ -32,8 +32,8 @@ class Users extends Model{
 		return $this->email;
 	}
 
-	public isRegistered () {
-		if(isset($this->user_type)) {
+	public function isRegistered(){
+		if(isset($this->user_type)){
 			return true;
 		}
 		else {
@@ -87,7 +87,7 @@ class Users extends Model{
 	//JENNIFER's addUser method
 
 	public function addUser($data){
-		var_dump($data)
+
 		$uID = $_POST["post_uID"];
 		$email = $_POST["post_email"];
 		$password = $_POST['post_password'];
@@ -95,11 +95,18 @@ class Users extends Model{
 		$lname = $_POST['post_lname'];
 
 		$sql="INSERT INTO users (email, password, first_name, last_name) VALUES (?,?)";
-		/* $sql="INSERT INTO users (email, password, first_name, last_name) VALUES ('".$email."','".$password."','".$fname."','".$lname."')"; */
+		 $sql="INSERT INTO users (email, password, first_name, last_name) VALUES ('".$email."','".$password."','".$fname."','".$lname."')"; */
 		$this->db->execute($sql,$data);
 		$message = 'User added.';
 		return $message;
 
+	}
+
+	public function getUserFromEmail($email){
+		$sql = 'SELECT $ FROM users WHERE email = ?';
+		$results = $this->db->getrow($sql, array($email));
+		$user = $results;
+		return $user;
 	}
 
 	public function getUserFromID($uID){
@@ -115,7 +122,7 @@ class Users extends Model{
 		$results = $this->db->getrow($sql, array($email));
 
 		$password = results(1);
-		echo $password;
+		
 
 		die();
 	}

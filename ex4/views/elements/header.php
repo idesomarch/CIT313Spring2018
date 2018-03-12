@@ -17,7 +17,6 @@
     </style>
     <link href="<?php echo BASE_URL?>views/css/bootstrap-responsive.css" rel="stylesheet">
     <?php
-    
     if($u->isAdmin()) {
       ?>
       <link rel="stylesheet" href="<?php echo BASE_URL?>application/plugins/tinyeditor/tinyeditor.css">
@@ -63,7 +62,7 @@
             ?>
               <ul class="nav pull-right">
                   <li class="dropdown">
-                    <a href="a" role="button" class"dropdown-toggle" data-toggle="dropdown">
+                    <a href="a" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       <?php echo $u->getUserName();?><b class="caret"></b>
                     </a>
                       <ul class="dropdown-menu" role="menu">
@@ -73,12 +72,13 @@
                           <li>
                             <a href="<?php echo BASE_URL ?>addpost/">Add Blog Post</a>
                           </li>
-                          <?php
-                          }
-                           ?>
+
                            <li>
                              <a href="<?php echo BASE_URL ?>login/logout/">Logout</a>
                            </li>
+                           <?php
+                           }
+                            ?>
                       </ul>
                   </li>
               </ul>

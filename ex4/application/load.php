@@ -12,3 +12,4 @@ class Load {
       include 'views/' . $file_name;
    }
 }
+?>

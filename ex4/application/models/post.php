@@ -42,6 +42,7 @@ class Post extends Model{
     }
 
     public function getAllPosts($limit = 0){
+
         if($limit > 0){
 
             $numposts = ' LIMIT '.$limit;

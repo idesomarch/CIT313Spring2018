@@ -9,4 +9,4 @@ define('DB_PASS', 'Withfireandsword8*');
 define('DB_NAME', 'brhammer_db');
 
 define('REQFIELD', '<font color="#FF0000">*</font>');
-
+?>

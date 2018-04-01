@@ -24,12 +24,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><span class="oop">BRD_HMMR</span></a>
+      <a class="navbar-left" href="index.php"><img src="assets/logo/logo.png" width="50" height="50"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li class="active"><a href="contact.html">Contact</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="portfolio.php">Portfolio</a></li>
+      <li class="active"><a href="contact.php">Contact</a></li>
     </ul>
     <div>
     <ul class="nav navbar-nav navbar-right" >
@@ -48,7 +48,7 @@
   Shoot me a message and I'll get back to you
 </h3>
 
-<form id="contact-form" method="post" action="contact.php" role="form">
+<form id="contact-form" method="post" action="mailto:bdhammer2288@gmail.com" role="form">
 
   <div class="messages"></div>
 

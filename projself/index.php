@@ -1,99 +1,88 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title></title>
-  <meta name="description" content="other">
-  <meta name="author" content="SitePoint">
+  <title>hello frnd</title>
+
   <!--Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- additional CSS -->
-  <link rel="stylesheet" href="css/">
-  <link  rel="stylesheet" href="css/3-col-portfolio.css">
-  <!--GoogleFonts-->
-  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway|Oswald:700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 
+
+
+  <!--GoogleFonts-->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
 
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-fixed-top">
-  <div class="container">
+  <header>
+    <nav class="navbar navbar-default sticky-top">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-left" href="index.php"><img src="assets/logo/logo.png" width="50" height="50"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="navbar-brand" href="#">brdhmmr</a>
     </div>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home
-        <span class="sr-only">(current)</span>
-      </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="portfolio.php">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.php">Contact</a>
-      </li>
-    </ul>
-    <div>
+      <li class="active"><a href="index.php" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+      <li><a href="portfolio.php" style="font-family: 'Roboto', sans-serif;">Portfolio</a></li>
+      <li><a href="contact.php" style="font-family: 'Roboto', sans-serif;">Contact</a></li>
+</ul>
+    <ul class="nav navbar-nav ml-auto" style="padding-left: 850px; position: auto;">
+          <li><a href="http://idesovmarch.tumblr.com"><span class="fab fa-tumblr-square fa-lg" style="color:Tomato"></span></a><li>
+          <li><a href="http://www.instagram.com/idesovmarch"><span class="fab fa-instagram fa-lg" style="color:Tomato"></span></a></li>
+          <li><a href="http://www.behance.net/idesovmarch"><span class="fab fa-behance fa-lg" style="color:Tomato"></span></a></li>
+        </ul>
       </div>
-    <ul class="nav navbar-nav navbar-right" >
-      <li><a href="http://idesovmarch.tumblr.com"><span class="fab fa-tumblr-square fa-lg" style="color:Tomato"></span></a></li>
-        <li><a href="http://www.instagram.com/idesovmarch"><span class="fab fa-instagram fa-lg" style="color:Tomato"></span></a></li>
-        <li><a href="http://www.behance.net/idesovmarch"><span class="fab fa-behance fa-lg" style="color:Tomato"></span></a></li>
-    </ul>
   </div>
-</div>
-
 </nav>
-</header>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <br>
-    <br>
-    <img src="assets/photos/me1.jpg" class="img-circle" alt="Brad-Himself">
-<h1 class="page-header" style="font-family: 'Oswald', sans-serif;">
-  Hey, I'm Brad.<br>
-</h1>
+  </header>
+  <div class="jumbotron">
+    <div class="container text-center" style="backgound-color: tomato;">
+
+      <img src="http://www.ohwhataworld.net/assets/photos/me1.jpg" class="img-circle" alt="Brad-Himself">
+      <div class="container-fluid">
+      <h1 class="page-header" style="font-family: 'Black Han Sans', sans-serif;">
+        Hey, I'm Brad.<br>
+      </h1>
+
+
+
+    <div id="rowx4" class="row text-center" style="background-color: tomato; margin-top: px;">
+      <div class="col-sm-4 col-md-6 col-lg-12" style="font-family: 'Black Han Sans', sans-serif; color: white;">
+        <h1>
+          I'm a Designer
+        </h1>
+      </div>
 </div>
 
+<div id="rowx4" class="row text-center">
+  <div class="col-sm-4 col-md-6 col-lg-12">
+    <p>
+      Right now this is a test website.
+    </p>
+  </div>
+</div>
 
-<div id="rowx3" class="row text-center" style="background-color: tomato;" >
-  <div class="col-sm-4 col-md-6 col-lg-12" style="font-family: 'Oswald', sans-serif;">
-<h2>
-  I AM AN
-</h2>
+</div>
   </div>
 
-  <div class="col-sm-4 col-md-6 col-lg-12" style=" font-family: 'Oswald', sans-serif;">
-<h2>
-  ARTIST, DESIGNER, AND THINKER
-</h2>
-  </div>
-</div>
-</div>
+  <footer class="container text-center">
 
+  </footer>
 
-<footer class="container text-center">
+  <!--Javascript-->
 
-</footer>
-</div>
-
-
-<!--Javascript-->
-<script src="js/fontawesome-all.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
 </body>
+
 </html>

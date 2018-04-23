@@ -1,6 +1,6 @@
 
 .section1 {
-  margin-top: 100px;
+  margin-top: ;
 }
 
 .navbar {
@@ -15,4 +15,24 @@
 #links {
   align-items: center;
 
+}
+
+// Class
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Usage as a mixin
+.element {
+  .center-block();
+}
+
+.text-center {
+  margin-top: 50px !important;
+}
+
+h1 {
+  color: #302423 !important;
 }

@@ -4,6 +4,7 @@
     <script src="<?php echo BASE_URL?>views/js/jquery.js"></script>
     <script src="<?php echo BASE_URL?>views/js/bootstrap.min.js"></script>
     <script src="<?php echo BASE_URL?>views/js/comment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
    <?php
    if($u->isAdmin()) {
        ?>

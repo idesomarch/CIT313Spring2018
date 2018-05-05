@@ -41,7 +41,20 @@
   </head>
 
   <body>
-
+    <script defer type="text/javascript">
+                 window.ChannelSettings = {
+                 applicationId:"app_6msxb8gjz8DlhZREWnSEpY6i_zJCS-m36Axopwcqc-M",
+                 userData:{
+                 name:"Paul"
+               } // For logged in user.
+             };
+             var i = document.createElement('script');
+             i.src = 'https://www.getchannel.co/apps/app_6msxb8gjz8DlhZREWnSEpY6i_zJCS-m36Axopwcqc-M/widget/';
+             i.async = true;
+             i.defer = true;
+             document.head.appendChild(i);
+           </script>
+           
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -70,6 +83,9 @@
                               <?php echo $u->getUserName();?><b class="caret"></b>
                           </a>
                             <ul class="dropdown-menu" role="menu">
+                              <li>
+                                  <a href="<?php echo BASE_URL?>manageposts/">My Profile</a>
+                              </li>
 
                                 <?php
                                 if($u->isAdmin()) {
@@ -77,6 +93,14 @@
                                     <li>
                                         <a href="<?php echo BASE_URL?>manageposts/">Manage Posts</a>
                                     </li>
+                                    <li>
+                                        <a href="<?php echo BASE_URL?>umanage/">Manage Users</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo BASE_URL?>manageposts/">Manage Categories</a>
+                                    </li>
+
+
                                 <?php
                                 }
                                 ?>

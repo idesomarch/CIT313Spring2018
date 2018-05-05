@@ -12,7 +12,11 @@ if( is_array($user) ) {
 <h1>Member <?php echo $user[uID];?></h1>
         <p>Email: <?php echo $user['email'];?></p>
   </div>
-	
+	<?php
+	if($u->isAdmin()) {?>
+<button>Delete</button>
+<button>Approve</button>
+<?php } ?>
 
 
 </div>

@@ -14,12 +14,11 @@ include('views/elements/header.php');?>
     <p><a href="mailto:<?php echo $u['email'];?>"><?php echo $u['email'];?></a></p>
 
     <?php }?>
-
+    
     <?php
     if($u->isAdmin()) {?>
-      <button>Approve</button>
     <button>Delete</button>
-
+    <button>Approve</button>
     <?php } ?>
 
 </div>

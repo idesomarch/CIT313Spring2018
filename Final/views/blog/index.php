@@ -25,6 +25,20 @@
             <?php } ?>
 
         <?php }?>
+        
+        <script defer type="text/javascript">
+             window.ChannelSettings = {
+             applicationId:"app_6msxb8gjz8DlhZREWnSEpY6i_zJCS-m36Axopwcqc-M",
+             userData:{
+             name:"Paul"
+           } // For logged in user.
+         };
+         var i = document.createElement('script');
+         i.src = 'https://www.getchannel.co/apps/app_6msxb8gjz8DlhZREWnSEpY6i_zJCS-m36Axopwcqc-M/widget/';
+         i.async = true;
+         i.defer = true;
+         document.head.appendChild(i);
+       </script>
     </div>
 
 
